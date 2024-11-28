@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icon.ico">
+    <title>Posada del Flamenco</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <style>
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+            padding: 16px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        #inicio img {
+            max-width: 35%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        body.fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        body.fade-in.loaded {
+            opacity: 1;
+        }
+        header h1, header p {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+
+        body.loaded header h1, body.loaded header p {
+            opacity: 1;
+            transform: translateY(0);
+        }
+</style>
+    </style>
+
+<script>
+    window.onload = function () {
+    // Obtén la hora actual
+    var horaActual = new Date().getHours();
+
+    // Si es de noche (por ejemplo, después de las 18:00), aplica el modo noche
+    if (horaActual >= 20 || horaActual < 7) {
+        document.body.classList.add('night-mode');
+    }
+
+    // Agrega la clase 'loaded' después de verificar el modo noche
+    document.body.classList.add('loaded');
+};
+</script>
+</style>
+
+</head>
+
+<body class="fade-in">
+    <header>
+        <div class="logo">
+            <img src="img/icon.ico" alt="Icono de la Posada del Flamenco">
+        </div>
+        <h1>Posada del Flamenco</h1>
+        <p>Miramar de Ansenuza</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#Instalaciones">Instalaciones</a></li>
+            <li><a href="#Servicios">Servicios</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="inicio">
+        <h2>Bienvenido a Posada del Flamenco</h2>
+        <p>Ofrecemos alojamiento temporario en la encantadora Miramar de Ansenuza (provincia de Córdoba). Nuestros departamentos te proporcionan un refugio acogedor, con habitaciones que combinan estilo, funcionalidad y todo lo necesario para lograr una maravillosa estadía.</p>
+        <img src="img/predio.jpg" alt="predio">
+        <img src="img/pileta11.jpeg" alt="predio">
+        <img src="img/pileta22.jpeg" alt="predio">
+        <img src="img/predio......jpg" alt="predio">
+    </section>  
+
+    <section id="Instalaciones">
+    <h2>Nuestras Instalaciones</h2>
+    <p>Nuestro complejo cuenta con 3 departamentos, 2 de ellos con capacidad máxima para 4 personas, y uno con capacidad máxima para 5 personas. Cada departamento cuenta con 1 sommier de 2 plazas, y 2/3 camas de una plaza, baño, cocina completamente equipada, piscina con spa, patio, quincho techado con asadores amplios y cochera de material.</p>
+    <div class="gallery">
+        <img src="img/dpto1.jpg" alt="Instalación 1">
+        <img src="img/dpto1..jpg" alt="Instalación 2">
+        <img src="img/depto33.jpeg" alt="Instalación 3">
+        <img src="img/dpto3..jpg" alt="Instalación 2">
+    </div>
+</section>
+
+<section id="Servicios">
+    <h2>Servicios</h2>
+    <p>Para una estadía cómoda y confortable, nuestro alojamiento cuenta con los siguientes servicios:</p>
+
+    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 MuiGrid-grid-md-2 css-w1c2kl">
+    <div class="MuiBox-root css-42vlq3" anchor="bottom">
+        <i class="fas fa-car service-icon"></i>
+        Cochera
+    </div>
+</div>
+
+<!-- Icono para Pileta -->
+<div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 MuiGrid-grid-md-2 css-w1c2kl">
+    <div class="MuiBox-root css-42vlq3" anchor="bottom">
+        <i class="fas fa-swimming-pool service-icon"></i>
+        Pileta
+    </div>
+</div>
+        <!-- Agrega aquí los bloques similares para los demás servicios -->
+
+        <!-- Icono para WIFI -->
+        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 MuiGrid-grid-md-2 css-w1c2kl">
+            <div class="MuiBox-root css-42vlq3" anchor="bottom">
+                <i class="fas fa-wifi service-icon"></i>
+                Wifi
+            </div>
+        </div>
+
+        <!-- Icono para Aire Acondicionado -->
+        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 MuiGrid-grid-md-2 css-w1c2kl">
+            <div class="MuiBox-root css-42vlq3" anchor="bottom">
+                <i class="fas fa-snowflake service-icon"></i>
+                Aire Acondicionado
+            </div>
+        </div>
+
+        <!-- Icono para Ropa de Cama -->
+        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 MuiGrid-grid-md-2 css-w1c2kl">
+            <div class="MuiBox-root css-42vlq3" anchor="bottom">
+                <i class="fas fa-bed service-icon"></i>
+                Ropa de Cama
+            </div>
+        </div>
+
+        <!-- Icono para Televisión -->
+        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 MuiGrid-grid-md-2 css-w1c2kl">
+            <div class="MuiBox-root css-42vlq3" anchor="bottom">
+                <i class="fas fa-tv service-icon"></i>
+                Televisión
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section id="ubicacion">
+        <h2>Ubicación</h2>
+        <p>Estamos ubicados en un lugar estratégico de Miramar, equidistantes de varios puntos claves como el centro, la playa principal y el casino.
+            Es un barrio muy tranquilo, libre de ruidos molestos, ideal para descansar y disfrutar de una agradable estadía.</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6845.231150963152!2d-62.6763109!3d-30.9253678!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94349ac2d8bc1fab%3A0x4f10813a5c2b742f!2sPosada%20Del%20Flamenco!5e0!3m2!1ses-419!2sar!4v1706463118419!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¡Estamos aquí para ayudarte! Contactanos para obtener más información.</p>
+        <p><b>Contacto</b>: 03563 15-40-2770</p>
+
+        <a href="https://www.facebook.com/posadadelflamencomiramar/?locale=es_LA" target="_blank" class="social-icon" style="font-size: 30px; text-decoration: none; color: #3b5998; margin-right: 10px;">
+            <i class="fab fa-facebook-square"></i>
+        </a>
+    
+        <!-- Instagram Icon -->
+        <a href="https://www.instagram.com/posadadelflamenco/" target="_blank" class="social-icon" style="font-size: 30px; text-decoration: none; color: #e4405f; margin-right: 10px;">
+            <i class="fab fa-instagram"></i>
+        </a>
+    
+        <!-- WhatsApp Icon -->
+        <a href="https://wa.me/+5493563402770" target="_blank" class="social-icon" style="font-size: 30px; text-decoration: none; color: #25d366; margin-right: 10px;">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    
+        <!-- Gmail Icon -->
+        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=DmwnWsdHGmkkGCJtZjZhPNWHdFGfSFffJlSfZqGvLbGrhSHmZmbKGWLDHwBnvkbHDjvgnqlnztjV" target="_blank" class="social-icon" style="font-size: 30px; text-decoration: none; color: #ea4335;">
+            <i class="far fa-envelope"></i>
+        </a>
+    </section>
+
+    <section class="footer">
+        <p>&copy; 2024 Posada del Flamenco - Miramar de Ansenuza</p>
+    </section>
+</body>
+
+</html>
