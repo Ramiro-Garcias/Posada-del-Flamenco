@@ -1,0 +1,177 @@
+body:not(.night-mode) {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Fondo de día */
+    background-image: url("img/fondo.jpg");
+    background-size: cover;
+}
+
+body.night-mode {
+    background-color: #333; /* Color de fondo para el modo noche */
+    color: #fff; /* Color del texto para el modo noche */
+    background-image: url("img/nightmode.jpg");
+}
+
+body.night-mode section {
+    background-color: #555; /* Color de fondo gris oscuro */
+    color: #fff; /* Color del texto blanco */
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.1); /* Sutil sombra en el modo nocturno */
+}
+
+body.night-mode section:last-child {
+    margin-bottom: 0; /* Sin margen en la última sección */
+    background-color: #555; /* Color de fondo gris oscuro */
+    color: #fff; /* Color del texto blanco */
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.1); /* Sutil sombra en el modo nocturno */
+}
+header {
+    background-image: url("/img/mar-chiquita-ansenuza-10.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    border-bottom: 5px solid #f5c4ef;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+.logo img {
+    width: 115px;
+    height: auto;
+    border-radius: 50%;
+}
+
+nav {
+background-image: linear-gradient(
+    150deg,
+    #a7004e,
+    #f500c0,
+    #ff87bf
+);
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 1em;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #a7004e;
+}
+
+section {
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+h1 {
+    color: #f5c4ef;
+    font-size: 40px;
+    font-family: 'Brush Script', fantasy;
+    font-style: italic;
+}
+
+h2, h3 {
+    color: #ffffff;
+    background-image: linear-gradient(
+    150deg,
+    #a7004e,
+    #f500c0,
+    #ff87bf
+);
+}
+
+p {
+    font-size: 18px;
+}
+
+section {
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+#Instalaciones .gallery {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-direction: row;
+}
+
+#Instalaciones .gallery img {
+    width: 20%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer {
+    background-image: linear-gradient(
+    150deg,
+    #a7004e,
+    #f500c0,
+    #ff87bf
+);
+    color: #ffffff;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+}
+/* Estilo base para los botones en la sección de contacto */
+.social-icon {
+    font-size: 30px;
+    text-decoration: none;
+    margin-right: 10px;
+    color: #3b5998; /* Color base */
+    transition: color 0.3s ease, transform 0.3s ease-in-out;
+    display: inline-block; /* Asegura que la transición funcione correctamente */
+}
+
+/* Cambia el color al pasar el mouse por encima y escala */
+.social-icon:hover {
+    color: #a7004e; /* Nuevo color al pasar el mouse */
+    transform: scale(1.5); /* Cambia el tamaño al pasar el mouse */
+}
+
+/* Efecto de clic en el botón */
+.social-icon:active {
+    transform: scale(0.9); /* Cambia el tamaño al hacer clic */
+}
+
+/* Agrega espacio entre las secciones, excepto la primera y la última */
+section:not(:first-child):not(:last-child) {
+    margin-bottom: 30px; /* Puedes ajustar el valor según tus preferencias */
+}
+
+/* Estilo para la última sección */
+section:last-child {
+    margin-bottom: 0; /* Sin margen en la última sección */
+}
